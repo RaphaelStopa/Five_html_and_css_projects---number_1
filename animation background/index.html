@@ -1,0 +1,51 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="menuToggle" onclick="ToggleMenu();"></div>
+    <div class="navigation">
+        <div class="navArea">
+            <ul>
+                <li>
+                    <a href="#" onmouseenter="chanceImage('img1.jpg')">Home</a>
+                </li>
+                <li>
+                    <a href="#" onmouseenter="chanceImage('img2.jpg')">About</a>
+                </li>
+                <li>
+                    <a href="#" onmouseenter="chanceImage('img3.jpg')">Services</a>
+                </li>
+                <li>
+                    <a href="#"  onmouseenter="chanceImage('img4.jpg')">Portifolio</a>
+                </li>
+                <li>
+                    <a href="#"  onmouseenter="chanceImage('img5.jpg')">Team</a>
+                </li>
+                <li>
+                    <a href="#"  onmouseenter="chanceImage('img6.jpg')">Contact</a>
+                </li>
+            </ul>
+        </div>
+        <div class="imgArea">
+            <img src="img1.jpg" id ="slider">
+        </div>
+    </div>
+    <script>
+        function chanceImage(anything){
+            document.getElementById('slider').src = anything;
+        } 
+
+        function ToggleMenu(){
+            const menuToggle = document.querySelector('.menuToggle');
+            const navigation = document.querySelector('.navigation');
+            menuToggle.classList.toggle('active')
+            navigation.classList.toggle('active')
+        }
+    </script>
+</body>
+</html>
